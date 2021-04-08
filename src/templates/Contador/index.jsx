@@ -14,18 +14,18 @@ class Contador extends Component {
     name: "Click",
     counter: 0,
     contadorAutomatico: 0,
-    handleH1Click = this.handleH1Click.bind(this),
     posts: [
-        {
-          id: 1,
-          title: "O Título 1",
-          body: "O corpo 1",
-        },
-      ],
-  }
+      {
+        id: 1,
+        title: "O Título 1",
+        body: "O corpo 1",
+      },
+    ],
+  };
 
   timeoutUpdate = null;
 
+  handleH1Click = this.handleH1Click.bind(this);
   handleH1Click() {
     this.setState({ name: "Contador" });
   }
@@ -56,21 +56,22 @@ class Contador extends Component {
     this.setState({ posts });
   }
 
-
   render() {
-      const {name } = this.state;
-    <div className="container">
-      <h1> Contador Automatico: {contadorAutomatico}</h1>
-      <h1 onClick={this.handleH1Click}>
-        {name} {counter}
-      </h1>
-      <a
-        onClick={this.handleAClick}
-        className="App-link"
-        href="https://www.google.com.br"
-      >
-        Adicionar no contador
-      </a>
-    </div>;
+    const { name } = this.state;
+    return (
+      <div className="container">
+        <h1> Contador Automatico: {this.contadorAutomatico}</h1>
+        <h1 onClick={this.handleH1Click}>
+          {name} {this.counter}
+        </h1>
+        <a
+          onClick={this.handleAClick}
+          className="App-link"
+          href="https://www.google.com.br"
+        >
+          Adicionar no contador
+        </a>
+      </div>
+    );
   }
 }
