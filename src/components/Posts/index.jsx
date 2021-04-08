@@ -20,14 +20,17 @@ function Posts({ posts = [] }) {
   );
 }
 
-Posts.defaultProps = {
-  posts: [],
-};
+// O mesmo que passar o valor padrao direto no parametro
+// Posts.defaultProps = {
+//   posts: [],
+// };
 
+// Versão simples
 // Posts.propTypes = {
 //   posts: P.array,
 // };
 
+// Versão complexa
 Posts.propTypes = {
   posts: P.arrayOf(
     P.shape({
