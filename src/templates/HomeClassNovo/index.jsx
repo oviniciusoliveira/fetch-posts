@@ -9,7 +9,7 @@ export class Home extends Component {
     };
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState(
       (prevState, prevProps) => {
         console.log('PREV', prevState.counter);
@@ -20,7 +20,7 @@ export class Home extends Component {
         console.log('POST', this.state.counter);
       },
     );
-  }
+  };
 
   render() {
     return (

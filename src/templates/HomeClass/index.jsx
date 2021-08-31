@@ -1,11 +1,11 @@
-import { Component } from "react";
+import { Component } from 'react';
 
-import "./styles.css";
+import './styles.css';
 
-import { loadPosts } from "./../../utils/load-posts";
-import Posts from "./../../components/Posts";
-import TextInput from "./../../components/TextInput";
-import { Button } from "../../components/Button";
+import { loadPosts } from './../../utils/load-posts';
+import Posts from './../../components/Posts';
+import TextInput from './../../components/TextInput';
+import { Button } from '../../components/Button';
 
 class Home extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Home extends Component {
       allPosts: [],
       page: 0,
       postsPerPage: 2,
-      searchValue: "",
+      searchValue: '',
     };
   }
 
@@ -60,21 +60,12 @@ class Home extends Component {
       <section className="container">
         <div className="search-container">
           {!!searchValue && <h1>Search value: {searchValue} </h1>}
-          <TextInput
-            searchValue={searchValue}
-            handleChange={this.handleChange}
-          />
+          <TextInput searchValue={searchValue} handleChange={this.handleChange} />
         </div>
         {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
         {filteredPosts.length === 0 && <p>Não existem posts</p>}
         <div className="button-container">
-          {!searchValue && (
-            <Button
-              text="Load more posts"
-              onClick={this.loadMorePosts}
-              disabled={noMorePosts}
-            />
-          )}
+          {!searchValue && <Button text="Load more posts" onClick={this.loadMorePosts} disabled={noMorePosts} />}
         </div>
       </section>
     );

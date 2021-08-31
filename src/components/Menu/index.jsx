@@ -8,6 +8,7 @@ function Menu() {
       <div className="menu-container">
         <Link to="/">Home</Link>
         <Link to="/HomeClassNovo">HomeClassNovo</Link>
+        <Link to="/404">Page404</Link>
       </div>
     </React.Fragment>
   );
