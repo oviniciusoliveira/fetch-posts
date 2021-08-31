@@ -20,4 +20,5 @@ mock service worker (MSW)<br/>
   - [x] useParams
   - [x] useLocation
   - [x] useHistory
-  - [ ] Link
+  - [x] Get All Routes (\*)
+  - [x] Link
