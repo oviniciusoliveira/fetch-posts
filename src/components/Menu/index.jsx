@@ -10,6 +10,7 @@ function Menu() {
         <Link to="/contador">Contador</Link>
         <Link to="/home-class-novo">HomeClassNovo</Link>
         <Link to="/params">Params</Link>
+        <Link to="/history-location">History/Location</Link>
         <Link to="/404">Page404</Link>
       </div>
     </React.Fragment>

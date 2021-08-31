@@ -18,6 +18,6 @@ mock service worker (MSW)<br/>
     - [x] Exact
   - [x] Redirect
   - [x] useParams
-  - [ ] useLocation
-  - [ ] useHistory
+  - [x] useLocation
+  - [x] useHistory
   - [ ] Link

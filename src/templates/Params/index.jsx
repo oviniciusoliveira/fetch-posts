@@ -2,7 +2,6 @@ import { useParams } from 'react-router';
 
 function Params() {
   const params = useParams();
-  console.log(params);
   return (
     <div className="container">
       {Object.entries(params).length > 0 ? (
