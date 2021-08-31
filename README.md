@@ -17,6 +17,7 @@ mock service worker (MSW)<br/>
   - [x] Router
     - [x] Exact
   - [x] Redirect
+  - [x] useParams
   - [ ] useLocation
   - [ ] useHistory
   - [ ] Link

@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component } from 'react';
 
 class Contador extends Component {
   // Isto
@@ -11,14 +11,14 @@ class Contador extends Component {
   // state = {}
 
   state = {
-    name: "Click",
+    name: 'Click',
     counter: 0,
     contadorAutomatico: 0,
     posts: [
       {
         id: 1,
-        title: "O Título 1",
-        body: "O corpo 1",
+        title: 'O Título 1',
+        body: 'O corpo 1',
       },
     ],
   };
@@ -27,7 +27,7 @@ class Contador extends Component {
 
   handleH1Click = this.handleH1Click.bind(this);
   handleH1Click() {
-    this.setState({ name: "Contador" });
+    this.setState({ name: 'Contador' });
   }
   handleAClick = (event) => {
     event.preventDefault();
@@ -52,7 +52,7 @@ class Contador extends Component {
   componentWillUnmount() {
     const { posts } = this.state;
     clearTimeout(this.timeoutUpdate);
-    posts[0].title = "Componente Desmontado";
+    posts[0].title = 'Componente Desmontado';
     this.setState({ posts });
   }
 
@@ -60,18 +60,16 @@ class Contador extends Component {
     const { name } = this.state;
     return (
       <div className="container">
-        <h1> Contador Automatico: {this.contadorAutomatico}</h1>
+        <h1> Contador Automatico: {this.state.contadorAutomatico}</h1>
         <h1 onClick={this.handleH1Click}>
-          {name} {this.counter}
+          {name} {this.state.counter}
         </h1>
-        <a
-          onClick={this.handleAClick}
-          className="App-link"
-          href="https://www.google.com.br"
-        >
+        <a onClick={this.handleAClick} className="App-link" href="https://www.google.com.br">
           Adicionar no contador
         </a>
       </div>
     );
   }
 }
+
+export default Contador;
