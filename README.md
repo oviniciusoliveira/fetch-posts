@@ -11,7 +11,7 @@ mock service worker (MSW)<br/>
 
 ## Roteamento utilizando React-Router-DOM
 
-- [ ] React-Router-DOM
+- [x] React-Router-DOM
   - [x] BrowserRouter
   - [x] Switch
   - [x] Router
