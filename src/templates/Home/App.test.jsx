@@ -64,6 +64,8 @@ describe('<Home />', () => {
 
     const button = screen.getByRole('button', { name: /Load more posts/i });
     expect(button).toBeInTheDocument();
+
+    expect.assertions(3);
   });
 
   it('should search for posts', async () => {
